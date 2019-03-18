@@ -1,13 +1,13 @@
-# QGIS GPS Point of Interest Exporter
+# QGIS GPS Point of Interest Exporter by color
 
-The ***POI Exporter*** plugin was designed to create points of interest used by **Garmin GPS** devices, but may work for other devices as well. Please let me know if it works for your brand. If there is a slight change that is needed to support your GPS device, let me know and I may be able to implement it. The only reason it has not been tested on other devices is because I only have Garmin devices. 
+The ***POI Exporter ColorHash*** plugin was designed to create points of interest used by **Garmin GPS** devices, but may work for other devices as well. Please let me know if it works for your brand. If there is a slight change that is needed to support your GPS device, let me know and I may be able to implement it. The only reason it has not been tested on other devices is because I only have Garmin devices. 
 
-If you download the plugin from github, rename the folder to poiexport and put it in the QGIS plugins directory. When you launch QGIS and enable the plugin, it will be displayed in QGIS under the menu ***Vector->GIS->POI Exporter***. It can also be launch from the toolbar by clicking on this icon ![](icon.png).
+If you download the plugin from github, rename the folder to poiexport and put it in the QGIS plugins directory. When you launch QGIS and enable the plugin, it will be displayed in QGIS under the menu ***Vector->GIS->POI Exporter ColorHash***. It can also be launch from the toolbar by clicking on this icon ![](icon.png).
 
 ## POI Exporter ColorHash Dialog
 This is the dialog box that will be seen when ***POI Exporter ColorHash*** is launched.
 
-![](doc/poiexport.jpg)
+![](doc/poiexportercolorhash.jpg)
 
 
 * **Select Output POI Folder** - This is the folder that the POI files are saved in and is also what the [Garmin POI Loader](http://www.garmin.com/us/maps/poiloader) uses to load the POIs onto their devices.
