@@ -1,0 +1,87 @@
+<head>
+<style>
+body {
+    font:13.34px helvetica,arial,freesans,clean,sans-serif;
+    color:black;
+    line-height:1.4em;
+    background-color: #F8F8F8;
+    padding: 0.7em;
+}
+pre {
+    margin:1em 0;
+    font-size:12px;
+    background-color:#eee;
+    border:1px solid #ddd;
+    padding:5px;
+    line-height:1.5em;
+    color:#444;
+    overflow:auto;
+    -webkit-box-shadow:rgba(0,0,0,0.07) 0 1px 2px inset;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;border-radius:3px;
+}
+pre code {
+    padding:0;
+    font-size:12px;
+    background-color:#eee;
+    border:none;
+}
+code {
+    font-size:12px;
+    background-color:#f8f8ff;
+    color:#444;
+    padding:0 .2em;
+    border:1px solid #dedede;
+}
+</style>
+</head>
+<body>
+<h1 id="qgis-gps-point-of-interest-exporter">QGIS GPS Point of Interest Exporter</h1>
+<p>The <strong><em>POI Exporter ColorHash</em></strong> plugin was designed to create points of interest used by <strong>Garmin GPS</strong> devices, but may work for other devices as well. Please let me know if it works for your brand. If there is a slight change that is needed to support your GPS device, let me know and I may be able to implement it. The only reason it has not been tested on other devices is because I only have Garmin devices. </p>
+<p>If you download the plugin from github, rename the folder to poiexport and put it in the QGIS plugins directory. When you launch QGIS and enable the plugin, it will be displayed in QGIS under the menu <strong><em>Vector-&gt;GIS-&gt;POI Exporter</em></strong>. It can also be launch from the toolbar by clicking on this icon <img alt="" src="icon.png" />.</p>
+<h2 id="poi-exporter-colorhash-dialog">POI Exporter ColorHash Dialog</h2>
+<p>This is the dialog box that will be seen when <strong><em>POI Exporter ColorHash</em></strong> is launched.</p>
+<p><img alt="" src="doc/poiexportcolorhash.jpg" /></p>
+<ul>
+<li><strong>Select Output POI Folder</strong> - This is the folder that the POI files are saved in and is also what the <a href="http://www.garmin.com/us/maps/poiloader">Garmin POI Loader</a> uses to load the POIs onto their devices.</li>
+<li>
+<p><strong>Output Format</strong> - Currently <strong><em>GPX</em></strong> and <strong><em>Garmin CSV</em></strong> formats are supported.</p>
+<ul>
+<li><strong>GPX</strong> - This is a universal format that should work with a number of devices. You can also use this format to import points into <a href="http://www.garmin.com/en-US/shop/downloads/basecamp">Garmin BaseCamp</a>.</li>
+<li>
+<p><strong>Garmin CSV</strong> - This creates a POI CSV file where each line is formatted as:</p>
+<pre><code>Longitude,Latitude,"Name"[,"Description"]
+</code></pre>
+<p><strong>Name</strong> , <strong>Description</strong> and <strong>Comment</strong> use quoted text strings where each string has double quotes at the beginning and end, and internal double quotes are duplicated. By quoting the strings, commas, new lines, and carriage returns can be used. This shows an example from the Natural Earth data set.</p>
+<pre><code>-74.1793513663,40.9151065125,"Paterson Great Falls NHP","National Historical Park"  
+-74.2397354809,40.7858747417,"Thomas Edison NHP","National Historical Park"  
+-75.4446508454,40.0989444031,"Valley Forge NHP","National Historical Park"
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Input Vector Layer</strong> - All the point vector layers in the QGIS project will be listed here.</p>
+</li>
+<li>
+<p><strong>Select Category Column (Optional)</strong> - Category names become the POI file names. When a column is used as the category name, the POIs are organized into multiple files based on the names specified in this column. If <strong>[Use Default Category]</strong> is used, then the file name will become the string from <strong>Default Category Name</strong>.</p>
+</li>
+<li>
+<p><strong>Default Category Name (This will become the file name)</strong> - When <strong>Select Category Column</strong> is set to <strong>[Use Default Category]</strong>, then the file name will become the string from this text field.</p>
+</li>
+<li>
+<p><strong>Select Column to be use as the POI Name</strong> - If there is a column that represents the name of the POI, then select it here; otherwise, every POI will get the <strong>Default POI Name</strong>. This will be the <strong>Title</strong> or <strong>Name</strong> that is displayed next to the POI marker on the map.</p>
+</li>
+<li>
+<p><strong>Default POI Name</strong> - This specifies a default POI name if a POI Name column is not specified.</p>
+</li>
+<li>
+<p><strong>Optional Description Column</strong> - This is optional and some devices may not use it, but it is supported by <strong>Garmin</strong> devices.</p>
+</li>
+<li>
+<p><strong>Optional Comment Column</strong> - This is optional and some devices may not use it, but it is supported by <strong>Garmin</strong> devices.</p>
+</li>
+<li>
+    <p><strong>Optional Data visualization Column</strong> - This is optional. This allows to differentiate a group of data by color</p>
+</li>
+</ul>

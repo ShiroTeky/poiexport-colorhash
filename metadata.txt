@@ -1,0 +1,16 @@
+[general]
+name=POI Exporter ColorHash
+qgisMinimumVersion=3.0
+description=Export CSV or GPX Points of Interest (POI) and Create POI by color
+version=1.0.0
+author=Hubert Tecleky
+email=tecleky.nguessan@gmail.com
+about=This plugin creates Points of Interest (POI) from a vector points layer. It supports Garmin CSV and GPX output formats. It allows the user to select a category column to be used to create separate files containing points from that category. The user can also select columns to be used for the POI name and description. The plugin can be found in "Vector->GPS->POI Exporter"
+homepage=https://github.com/ShiroTeky/poiexport-colorhash
+tracker=https://github.com/ShiroTeky/poiexport-colorhash/issues
+repository=https://github.com/ShiroTeky/poiexport-colorhash
+tags=poi,garmin,points of interest,gps,vector,points,basecamp
+category=Vector
+icon=icon.png
+experimental=False
+deprecated=False
