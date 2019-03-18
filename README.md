@@ -7,7 +7,7 @@ If you download the plugin from github, rename the folder to poiexport and put i
 ## POI Exporter ColorHash Dialog
 This is the dialog box that will be seen when ***POI Exporter ColorHash*** is launched.
 
-![](doc/poiexportcolorhash.jpg)
+![](doc/poiexportercolorhash.jpg)
 
 
 * **Select Output POI Folder** - This is the folder that the POI files are saved in and is also what the [Garmin POI Loader](http://www.garmin.com/us/maps/poiloader) uses to load the POIs onto their devices.
