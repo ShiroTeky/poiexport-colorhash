@@ -50,6 +50,7 @@ class POIExportColorHashDialog(QDialog, FORM_CLASS):
         self.vectorComboBox.setFilters(QgsMapLayerProxyModel.PointLayer)
         self.categoryComboBox.activated.connect(self.setEnabled)
         self.poiNameComboBox.activated.connect(self.setEnabled)
+        self.visualComboBox.activated.connect(self.setEnabled)
         self.epsg4326 = QgsCoordinateReferenceSystem("EPSG:4326")
         self.buttonBox.button(QDialogButtonBox.Help).clicked.connect(self.help)
 
