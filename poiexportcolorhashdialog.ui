@@ -143,7 +143,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QComboBox" name="agenceComboBox"/>
+    <widget class="QComboBox" name="visualComboBox"/>
    </item>
    <item>
     <widget class="QLabel" name="label_8">
