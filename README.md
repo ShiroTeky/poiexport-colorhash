@@ -1,4 +1,4 @@
-# QGIS GPS Point of Interest Exporter by color
+# QGIS GPS Point of Interest Exporter by color based on POI Exporter plugin
 
 The ***POI Exporter ColorHash*** plugin was designed to create points of interest used by **Garmin GPS** devices, but may work for other devices as well. Please let me know if it works for your brand. If there is a slight change that is needed to support your GPS device, let me know and I may be able to implement it. The only reason it has not been tested on other devices is because I only have Garmin devices. 
 
